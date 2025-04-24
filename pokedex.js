@@ -1,7 +1,7 @@
 window.addEventListener("load", async function(){
     const output = document.getElementById("allPoke");
 
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1024&offset=0");
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
 
     if (!response.ok)
     {
