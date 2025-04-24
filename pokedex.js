@@ -1,7 +1,7 @@
 window.addEventListener("load", async function(){
     const output = document.getElementById("allPoke");
 
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1024&offset=0");
 
     if (!response.ok)
     {
@@ -19,8 +19,8 @@ window.addEventListener("load", async function(){
         const pokeSprite = pokeData.sprites.front_default;
 
         const space = document.createElement("div");
-        space.innerHTML = <p>${pokeDexnum} ${pokeName}</p>; 
-        space.innerHTML = <img src="${sprite}" alt="${name}"></img>;
+        space.innerHTML = `<p>${pokeDexnum} ${pokeName}</p>
+        <img src="${pokeSprite}" alt="${pokeName}"></img>`;
         output.appendChild(space);
     }
 });
