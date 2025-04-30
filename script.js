@@ -6,7 +6,7 @@ async function openDisplay() {
     const encodedText = encodeURIComponent(text);
     
     window.open(`display.html?data=${encodedText}`, "_blank");
-}
+}    
 
 async function fetchData() // Mauro did this whole function
 {
@@ -21,7 +21,8 @@ async function fetchData() // Mauro did this whole function
 
         if(!response.ok)
         {
-            document.getElementById("pokemonName").textContent = pokemonName + " is not real."; // Lyanne - Added some Error Handling
+            //document.getElementById("pokemonName").textContent = pokemonName + " is not real."; // Lyanne - Added some Error Handling
+            //window.alert("This pokemon does not exist");
             throw new Error("Could not fetch resource");
 
         }
@@ -42,3 +43,14 @@ async function fetchData() // Mauro did this whole function
         console.error(error);
     }
 }
+
+window.addEventListener("load", function() // Mauro - This is the function for pressing enter
+{
+    this.document.getElementById("pokemonName").addEventListener("keypress", function(event)
+    {
+        if (event.key == 'Enter')
+            {
+                openDisplay();
+            }
+    });   
+});
