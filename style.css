@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #b9f0fa;
+    color: white;
+    font-size: 50px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*padding: 15%;*/
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 3%;
+    margin-top: 10%;
+    color: #ffcc01; 
+    text-shadow: 3px 3px 5px grey; 
+    -webkit-text-stroke-color: #355fab;
+    -webkit-text-stroke-width: 4px;
+}
+
+input[type=text] {
+    font-family: "Pixelify Sans", sans-serif;
+    width: 40%;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    box-shadow: 3px 3px 5px grey;
+}
+
+
+#buttons {
+    flex-direction: row;
+}
+
+button {
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px grey;
+}
+
+#fetchbtn {
+    background-color: #45dc77;
+}
+
+#allbtn {
+    background-color: #18bfe4;
+}
+
+#fetchbtn:hover {
+    background-color: #449b61;
+}
+
+#allbtn:hover {
+    background-color: #2290a9;
+}
