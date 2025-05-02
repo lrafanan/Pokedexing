@@ -11,10 +11,10 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
         nameElement.textContent = data.forms[0].name;
         
         const height = document.getElementById("pokemonHeight");
-        height.textContent = data.height + "dm";
+        height.textContent = data.height + " dm"; // Mauro added units of easurements
         
         const weight = document.getElementById("pokemonWeight");
-        weight.textContent = data.weight + "dg";
+        weight.textContent = data.weight + " dg"; // Mauro added units of measurements
         
         const type = document.getElementById("pokemonType");
         type.textContent = data.types[0].type.name;
@@ -36,7 +36,7 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
             moveNames += data.moves[i].move.name;
             if (i < data.moves.length - 1)
             {
-                moveNames += ",";
+                moveNames += ", ";
             }
         }
         moves.textContent = moveNames;
