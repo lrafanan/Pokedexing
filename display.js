@@ -11,10 +11,10 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
         nameElement.textContent = data.forms[0].name;
         
         const height = document.getElementById("pokemonHeight");
-        height.textContent = data.height;
+        height.textContent = data.height + "dm";
         
         const weight = document.getElementById("pokemonWeight");
-        weight.textContent = data.weight;
+        weight.textContent = data.weight + "dg";
         
         const type = document.getElementById("pokemonType");
         type.textContent = data.types[0].type.name;
@@ -28,5 +28,17 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
             }
         }
         abilities.textContent = abilityNames;
+        // Mauro added this loop
+        const moves = document.getElementById("pokemonMoves");
+        let moveNames = "";
+        for (let i = 0; i < data.moves.length; i++)
+        {
+            moveNames += data.moves[i].move.name;
+            if (i < data.moves.length - 1)
+            {
+                moveNames += ",";
+            }
+        }
+        moves.textContent = moveNames;
         sessionStorage.clear();
     }
