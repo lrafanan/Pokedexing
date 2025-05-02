@@ -1,33 +1,21 @@
-fetchData(); // Lyanne - used to show the pokemon on display.html
-
-// Lyanne's function - Redirects to display.html with the pokemonName inputed by the user through the URL
-async function openDisplay() {
-    const text = document.getElementById("pokemonName").value;
-    const encodedText = encodeURIComponent(text);
-    
-    window.open(`display.html?data=${encodedText}`, "_blank");
-}    
-
 async function fetchData() // Mauro did this whole function
 {
-    // Lyanne - Added these lines to get the Name through the URL 
-    const params = new URLSearchParams(window.location.search);
-    const pokemonName = params.get("data"); 
-
     try
     {
-        //const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if(!response.ok)
         {
-            //document.getElementById("pokemonName").textContent = pokemonName + " is not real."; // Lyanne - Added some Error Handling
-            //window.alert("This pokemon does not exist");
+            window.alert("This pokemon does not exist");
             throw new Error("Could not fetch resource");
-
         }
+        const data = await response.json(); // parses response into an object
+        // Lyanne - Stores data in sessionstorage as a string then redirects to new page to display data
+        sessionStorage.setItem("pdata", JSON.stringify(data));
+        window.location.href = `display.html`; 
 
-        const data = await response.json();
+       /* window.location.href = `display.html?data=${encodedText}`;
         
         // Displays data from pokeapi
         const pokemonSprite = data.sprites.front_default;
@@ -55,7 +43,7 @@ async function fetchData() // Mauro did this whole function
                 abilityNames += ", ";
             }
         }
-        abilities.textContent = abilityNames;
+        abilities.textContent = abilityNames;*/
 
     }
     catch(error)
@@ -70,7 +58,8 @@ window.addEventListener("load", function() // Mauro - This is the function for p
     {
         if (event.key == 'Enter')
             {
-                openDisplay();
+                //openDisplay();
+                fetchData();
             }
     });   
 });
