@@ -32,7 +32,7 @@
     margin-bottom: 1%;
     margin-top: 10%;
     color: #ffcc01; 
-    text-shadow: 3px 3px 5px grey; 
+    text-shadow: 3px 3px 5px darkred; 
     -webkit-text-stroke-color: #355fab;
     -webkit-text-stroke-width: 4px;
 }
@@ -81,8 +81,9 @@ button
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 3px 3px 5px grey;
+    box-shadow: 3px 3px 5px darkred;
     margin-top: 25px;
+    font-size: 18px;
 }
 
 #fetchbtn 
