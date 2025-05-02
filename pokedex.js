@@ -18,8 +18,11 @@ window.addEventListener("load", async function(){
         const pokeSprite = pokeData.sprites.front_default;
 
         const space = document.createElement("div");
-        space.innerHTML = `<p>${pokeDexnum} ${pokeName}</p>
-        <a href="display.html" class = "pokelink"> <img src="${pokeSprite}" alt="${pokeName}"></img></a>`; 
+        /*space.innerHTML = `<p>${pokeDexnum} ${pokeName}</p>
+        <a href="display.html" class = "pokelink"> <img id = "pokePics" src="${pokeSprite}" alt="${pokeName}"></img></a>`; */
+        space.innerHTML = `<a href="display.html" class = "pokelink"> 
+        <img id = "pokePics" src="${pokeSprite}" alt="${pokeName}"></img>
+        <p id = "PokeName" >${pokeDexnum} ${pokeName}</p> </a>`;
         output.appendChild(space);
 
         const link = space.querySelector(".pokelink");
