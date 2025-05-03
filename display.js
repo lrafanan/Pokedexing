@@ -33,12 +33,13 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
         let moveNames = "";
         for (let i = 0; i < data.moves.length; i++)
         {
-            moveNames += data.moves[i].move.name;
+            moveNames += data.moves[i].move.name + "<br>";
             if (i < data.moves.length - 1)
             {
-                moveNames += ", ";
+                moveNames += " ";
             }
         }
-        moves.textContent = moveNames;
+        moves.innerHTML = moveNames;
+        //console.log(moveNames);
         //sessionStorage.clear();
     }
