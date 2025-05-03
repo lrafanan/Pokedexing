@@ -13,9 +13,9 @@ async function fetchData() // Mauro did this whole function
         const data = await response.json(); // parses response into an object
         // Lyanne - Stores data in sessionstorage as a string then redirects to new page to display data
         sessionStorage.setItem("pdata", JSON.stringify(data));
-        window.location.href = `display.html`; 
+        window.open("display.html"); 
 
-       /* window.location.href = `display.html?data=${encodedText}`;
+        /*window.open("display.html"); 
         
         // Displays data from pokeapi
         const pokemonSprite = data.sprites.front_default;

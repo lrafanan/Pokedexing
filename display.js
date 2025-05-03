@@ -40,5 +40,5 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
             }
         }
         moves.textContent = moveNames;
-        sessionStorage.clear();
+        //sessionStorage.clear();
     }

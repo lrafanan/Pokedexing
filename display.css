@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #b9f0fa;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+/*POKEDEX**************************************************************************/
+#title {
+    font-size: 75px;
+    margin-bottom: 1%;
+    margin-top: 10%;
+    color: #ffcc01; 
+    text-shadow: 0 0 5px darkred; 
+    -webkit-text-stroke-color: #355fab;
+    -webkit-text-stroke-width: 4px;
+  }
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10% 30%;
+    gap: 3%; 
+    background-color: #ff4400;
+    flex-wrap: wrap;
+    padding: 5px 5px 50px 5px;
+    box-shadow: 3px 3px 10px grey;
+    border: 5px solid #ff4400;
+    border-style: outset;
+    border-radius: 2%;
+}
+
+#results {
+  background-color: white;
+  /*margin: 20% 10% 10% 10%;*/
+  margin: 5% 10%;
+  width: auto;
+  height: 200px;
+  padding: 1%;
+  overflow: auto;
+  border: 7px solid red;
+  border-style: groove;
+  box-shadow: inset 0 0 5px black;
+}
+
+#buttons {
+    flex-direction: row;
+}
+
+button {
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px darkred;
+    border: none;
+  }
+
+#fetchbtn {
+    background-color: #45dc77;
+}
+
+#allbtn {
+    background-color: #18bfe4;
+}
+
+#fetchbtn:hover {
+    background-color: #449b61;
+}
+
+#allbtn:hover {
+    background-color: #2290a9;
+}
+
+/*DATA FORMATTING************************************************************************/
+
+
+#aboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#NameHeightWeightType {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 1%;
+  gap: 500px;
+  background-color: aliceblue;
+}
+
+#AbilitiesMoves {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 5px solid green;
+}
+
+
+/*DETAILS******************************************************************************/
+img {
+  background-color: white;
+  border: 10px solid blue;
+  outline: 10px solid yellow;
+  border-style: inset;
+  outline-style: inset;
+  border-radius: 1%;
+  width: 30%;
+  height: 30%;
+  margin-left: 5%;
+}
+
+#pokemonName {
+  background-color: yellow;
+  border-radius: 10px 0 0 10px;
+  font-weight: lighter;
+  padding: 5%;
+  margin-bottom: none;
+  align-self: flex-start;
+}
+
+
+
+
+
