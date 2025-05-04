@@ -35,9 +35,7 @@ body {
 }
 
 #screen {
-  background-color: #e8fefc;
-  /*margin: 5% 4% 5% 4%;*/
-  /*margin: 5% 10%;*/
+  background-color: white;
   margin: 2% auto;
   width: 60%;
   height: 300px;
@@ -45,7 +43,7 @@ body {
   overflow: auto;
   border: 7px solid red;
   border-style: groove;
-  box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 0 10px black;
 }
 
 #buttons {
@@ -113,30 +111,37 @@ a {
 /*DETAILS******************************************************************************/
 img {
   background-color: white;
-  border: 5px solid #43aaff;
-  outline: 5px solid #fff981;
+  border: 3.5px outset #4f4fff;
+  outline: 5px solid #fff75e;
   border-radius: 1%;
   width: 30%;
   height: 30%;
   margin-left: 2%;
   margin-top: 8%;
   box-shadow: 0 0 20px #a2b1b0;
+  box-shadow: inset 0 0 50px blue;
+  outline-style: inset;
 }
 
 #pokemonName, #hwt {
-  background-color: #fff981;
+  background-color: #fff761;
   border-radius: 10px 0 0 10px;
   font-weight: lighter;
   padding: 3%;
   margin-bottom: none;
   align-self: flex-start;
   font-size: medium;
-  box-shadow: 0 0 5px blue;
   border-bottom: 5px solid white;
+  box-shadow: 0 0 5px grey;
+  border-style: inset;
 }
 
 #hwt {
-  background-color: rgb(190, 225, 255);
+  background-color: rgb(145, 204, 255);
+}
+
+#pokemonName:hover, #hwt:hover {
+  box-shadow: 0 0 5px blue;
 }
 
 #abilities, #stats {
@@ -145,4 +150,12 @@ img {
 
 #moves {
   background-color: #99fa999f;
+}
+
+#abilities:hover, #stats:hover {
+  background-color: #74ff74;
+}
+
+#pokemonMoves:hover {
+  background-color: #73ff73;
 }
