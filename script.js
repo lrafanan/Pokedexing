@@ -1,11 +1,12 @@
+let pokemonName = null
 async function fetchData() // Mauro did this whole function
 {
     try
     {
-        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
-        if(!response.ok)
+        if(!response.ok || pokemonName == "")
         {
             window.alert("This pokemon does not exist");
             throw new Error("Could not fetch resource");
@@ -54,12 +55,19 @@ async function fetchData() // Mauro did this whole function
 
 window.addEventListener("load", function() // Mauro - This is the function for pressing enter
 {
+    this.document.getElementById("fetchbtn").addEventListener("click", function()
+    {
+        if (pokemonName != null)
+        {
+            fetchData();
+        }
+    });
     this.document.getElementById("pokemonName").addEventListener("keypress", function(event)
     {
         if (event.key == 'Enter')
             {
                 //openDisplay();
-                fetchData();
+                fetchData(); 
             }
     });   
 });
