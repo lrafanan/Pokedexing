@@ -5,15 +5,14 @@ body {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 20px;
 }
 /*POKEDEX**************************************************************************/
 #title {
-    font-size: 75px;
+    font-size: 5rem;
     margin-bottom: 1%;
-    margin-top: 10%;
+    margin-top: none;
     color: #ffcc01; 
-    text-shadow: 0 0 5px darkred; 
+    text-shadow: 0 0 10px #b22f00; 
     -webkit-text-stroke-color: #355fab;
     -webkit-text-stroke-width: 4px;
   }
@@ -22,24 +21,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    margin: 10% 30%;
-    gap: 3%; 
-    background-color: #ff4400;
-    flex-wrap: wrap;
-    padding: 5px 5px 50px 5px;
-    box-shadow: 3px 3px 10px grey;
-    border: 5px solid #ff4400;
-    border-style: outset;
-    border-radius: 2%;
+    flex-direction: column;
 }
 
-#results {
-  background-color: white;
-  /*margin: 20% 10% 10% 10%;*/
-  margin: 5% 10%;
-  width: auto;
-  height: 200px;
+#dex {
+  margin: 2% auto;
+  background-color: #ff4400;
+  padding: 5px 5px 50px 5px;
+  box-shadow: 3px 3px 10px grey;
+  border: 5px solid #ff4400;
+  border-style: outset;
+  border-radius: 2%;
+}
+
+#screen {
+  background-color: #e8fefc;
+  /*margin: 5% 4% 5% 4%;*/
+  /*margin: 5% 10%;*/
+  margin: 2% auto;
+  width: 60%;
+  height: 300px;
   padding: 1%;
   overflow: auto;
   border: 7px solid red;
@@ -48,19 +49,25 @@ body {
 }
 
 #buttons {
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 button {
-    font-family: "Pixelify Sans", sans-serif;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 3px 3px 5px darkred;
-    border: none;
-  }
+  font-family: "Pixelify Sans", sans-serif;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px darkred;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
 
 #fetchbtn {
     background-color: #45dc77;
@@ -79,11 +86,9 @@ button {
 }
 
 /*DATA FORMATTING************************************************************************/
-
-
 #aboutMe {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -93,36 +98,51 @@ button {
   flex-wrap: nowrap;
   margin-bottom: 1%;
   gap: 500px;
-  background-color: aliceblue;
 }
 
-#AbilitiesMoves {
+#AbilitiesMovesStats {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  border: 5px solid green;
+  border: 5px solid rgb(135, 255, 135);
+  border-radius: 1%;
 }
 
 
 /*DETAILS******************************************************************************/
 img {
   background-color: white;
-  border: 10px solid blue;
-  outline: 10px solid yellow;
-  border-style: inset;
-  outline-style: inset;
+  border: 5px solid #43aaff;
+  outline: 5px solid #fff981;
   border-radius: 1%;
   width: 30%;
   height: 30%;
-  margin-left: 5%;
+  margin-left: 2%;
+  margin-top: 8%;
+  box-shadow: 0 0 20px #a2b1b0;
 }
 
-#pokemonName {
-  background-color: yellow;
+#pokemonName, #hwt {
+  background-color: #fff981;
   border-radius: 10px 0 0 10px;
   font-weight: lighter;
-  padding: 5%;
+  padding: 3%;
   margin-bottom: none;
   align-self: flex-start;
+  font-size: medium;
+  box-shadow: 0 0 5px blue;
+  border-bottom: 5px solid white;
+}
+
+#hwt {
+  background-color: rgb(190, 225, 255);
+}
+
+#abilities, #stats {
+  background-color: #99fa995d;
+}
+
+#moves {
+  background-color: #99fa999f;
 }
