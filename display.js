@@ -17,17 +17,31 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
         weight.textContent = data.weight + " dg"; // Mauro added units of measurements
         
         const type = document.getElementById("pokemonType");
-        type.textContent = data.types[0].type.name;
+        let typeNames = "";
+        for (let i = 0; i < data.types.length; i++)
+        {
+            typeNames += data.types[i].type.name;
+            if (i < data.types.length - 1)
+            {
+                typeNames += " ";
+            }
+        }
+        type.textContent = typeNames;
         
         const abilities = document.getElementById("pokemonAbilities");
         let abilityNames = "";
+        let hidden = "";
         for (let i = 0; i < data.abilities.length; i++) {
-            abilityNames += data.abilities[i].ability.name;
+            if (data.abilities[i].is_hidden == true)
+            {
+                hidden = "<br> Hidden Ability: ";
+            }
+            abilityNames += hidden + data.abilities[i].ability.name;
             if (i < data.abilities.length - 1) {
                 abilityNames += ", ";
             }
         }
-        abilities.textContent = abilityNames;
+        abilities.innerHTML= abilityNames;
         // Mauro added this loop
         const moves = document.getElementById("pokemonMoves");
         let moveNames = "";
@@ -40,6 +54,17 @@ let data = JSON.parse(sessionStorage.getItem("pdata"));
             }
         }
         moves.innerHTML = moveNames;
-        //console.log(moveNames);
+
+        const stats = document.getElementById("pokemonStats");
+        let pokeStats = "";
+        for (let i = 0; i < data.stats.length; i++)
+        {
+            pokeStats += data.stats[i].stat.name + ": " + data.stats[i].base_stat + "<br>";
+            if (i < data.stats.length - 1)
+            {
+                pokeStats += " ";
+            }
+        }
+        stats.innerHTML = pokeStats;
         //sessionStorage.clear();
     }
