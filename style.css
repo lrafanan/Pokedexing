@@ -1,12 +1,14 @@
 #index {
     margin: 0;
     padding: 0;
-    background-color: #b9f0fa;
+    background-color: #0042bab0;
     color: white;
     font-size: 50px;
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background-image: url("bg.png");
+    background-blend-mode: soft-light;
 } 
 
 #content {
@@ -18,12 +20,12 @@
 }
 
 #title {
-    font-size: 80px;
+    font-size: 100px;
     margin-bottom: 1%;
     margin-top: 10%;
-    color: #ffcc01; 
-    text-shadow: 3px 3px 5px grey; 
-    -webkit-text-stroke-color: #355fab;
+    color: #ffcc00; 
+    text-shadow: 3px 3px 10px rgb(0, 0, 116); 
+    -webkit-text-stroke-color: #0042ba;
     -webkit-text-stroke-width: 4px;
 }
 
@@ -32,8 +34,8 @@ input[type=text] {
     width: 40%;
     padding: 15px;
     border-radius: 20px;
-    border: 1px solid grey;
-    box-shadow: 3px 3px 5px grey;
+    border: 1px solid #0100de;
+    box-shadow: 3px 3px 5px #0021a7;
 }
 
 
@@ -49,21 +51,21 @@ button {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 3px 3px 5px grey;
+    box-shadow: 3px 3px 5px darkblue;
 }
 
 #fetchbtn {
-    background-color: #45dc77;
+    background-color: #00c942;
 }
 
 #allbtn {
-    background-color: #18bfe4;
+    background-color: #00cdfb;
 }
 
 #fetchbtn:hover {
-    background-color: #449b61;
+    background-color: #00ed4f;
 }
 
 #allbtn:hover {
-    background-color: #2290a9;
+    background-color: #00bbff;
 }
