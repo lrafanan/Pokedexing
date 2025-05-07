@@ -7,12 +7,12 @@ window.addEventListener("load", async function(){
         throw new Error("Could not fetch resource");
     }
 
-    const data = await response.json(); 
+    const data = await response.json(); // This makes it as a usable object
 
     for (const pokemon of data.results)
     {
-        const pokeResponse = await fetch(pokemon.url);
-        const pokeData = await pokeResponse.json();
+        const pokeResponse = await fetch(pokemon.url); // This fetches the pokemon using its url from the API
+        const pokeData = await pokeResponse.json(); // This now has all the data it wants from that particular pokemon
         const pokeDexnum = pokeData.id;
         const pokeName = pokeData.name; 
         const pokeSprite = pokeData.sprites.front_default;
@@ -26,6 +26,7 @@ window.addEventListener("load", async function(){
         output.appendChild(space);
 
         const link = space.querySelector(".pokelink");
+        // When the pokemon gets clicked on the webpage it saves the data of that pokemon to pdata.. 
         link.addEventListener("click", function()
         {
             sessionStorage.setItem("pdata", JSON.stringify(pokeData));
